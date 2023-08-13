@@ -1,0 +1,72 @@
+<!--
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 01. Viewports y diseño responsive- combinación adecuada en CSS
+
+   -----------------------------------------------------------------------------------
+
+    -En este capitulo podemos aprender como ver en el navegador, desde Herramientas de desarrollador o Click derecho+Inspeccionar; en la parte superior izq el icono de una tablet/movil. Desde alli podremos elegir el dispositivo que abrira nuestro archivo.
+
+    -Podemos observar que dependiendo de cada celular/tablet este no siempre se ve bien, en la mayoria se ve pequeño e ilegible el texto dado que el mismo no tiene la configuracion que precisa el archivo para que pueda verse de manera correcta aprovechando todo el espacio de pantalla de donde se valla a visualizar la web.
+
+    -Entonces si tocamos en Edit o o Click derecho en la lista de dispositivos (al ultimo) aparece la opcion "Reset to defaults". Esto elimina las reglas y podemos ver mas claramente cual es el tamaño de la pantalla del dispositivo con respecto al archivo.
+
+    -Aqui es donde usaremos la etiqueta "META" en donde aplicaremos las propiedades para que pueda verse de forma mas optima aprovechando todo el espacio en todos los dispositivos en los que se abra. Y podramos sacar provecho de la convinacion entre los Media Queries y las siguientes caracteristicas aplicadas en el Viewport.
+    
+    Se codifica de esta manera:
+
+        <meta                   :Etiqueta meta
+
+        name="viewport"         :Etiqueta name con el valor "viewport"
+
+        content="width=device-width     :Etiqueta content que especifica que el "ANCHO" sea el Maximo disponible en el dispositivo".
+
+        initial-scale=1         :Indica que el ESCALADO INICIAL sea 1
+
+        user-scalable=no        :Sentencia que nos permite hace zoom in/out dependiendo del valor que le asignemos (no/yes). Generalmente se indica como que NO para que el usuario no tenga que estar haciendo zoom para navegar e incluso se le mueva la pagina al navegar y confundirse. 
+
+        -Pero hay navegadores que no reconocen "user-scalable", por eso podemos adicionar tambien la propiedad que equivaldria a esta que es:
+
+        minimum-scale=0, maximum-scale=1
+
+    ACLARACION: 
+
+    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no,minimum-scale=0,maximum-scale=1">
+    <title>Viewports</title>
+
+    <link rel="stylesheet" type="text/css" href="base.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <p>        
+        Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo.
+        </p>
+        <p class="description">
+        Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+        At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. 
+        </p>
+        <p>
+        Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. 
+        </p>
+        <p>
+        Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. 
+        </p>
+        <p>
+        Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. 
+        </p>
+    </div>
+
+</body>
+</html>

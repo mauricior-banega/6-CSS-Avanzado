@@ -1,0 +1,28 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 03. Organización de estilos en archivos media queries con CSS
+*/
+
+/*Estilos para pantallas medianas o tabletas*/
+
+
+@media all and (max-width:1000px) and (min-width:700px)
+    {   
+        /*En el ejemplo indicamos que tenga 2 condiciones, ancho minimo y maximo y que aplique el estilo de: desactivar el div de clase .socialBar con (display: none;) y darle color de fondo verde claro y letras clancas.
+        
+        Quita el estilo, es decir quita las cajas del costado de redes sociales cuando el ancho es relativamente pequeño, ancho maximo de 1000px y minimo de 700px.s */
+
+        .socialBar
+        {
+            display: none;
+        }
+
+        body
+        {
+            background-color: #78BDBA;
+            color: white;
+        }
+
+    }

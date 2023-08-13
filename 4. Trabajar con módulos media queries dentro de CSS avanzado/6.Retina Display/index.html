@@ -1,0 +1,79 @@
+<!--
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 06. Resolución de pantalla y retina display dentro de CSS
+
+   -----------------------------------------------------------------------------------
+
+   -En esta ultima clase veremos la tecnologia "Retina Display", que se refiere a la calidad en la que se puede ver un contenido en un dispositivo movil. Antes se utilizaba una regla de codificacion llamada "min-device.pixel-ratio" porque la diferencia entre la dencidad que maneja un navegador con css y un dispositivo era muchisima, es decir hay una diferencia y se cubria con esa regla.
+
+   -Ahora se utilizan una metrica denominada "dppx" (dot per pixel), donde un 1ppx es = a 96 dpi (dot per inch o puntos por pulgada). Aclarando; si vamos a entender los conceptos de pixeles atravez del hardware hablaremos de dppx, pero si lo hacemos atravez de navegadores hablaremos de dpi.
+   Este tipo de uso del dppx corrige la relacion entre la resolucion nativa de navegadores que esta dada por el sistema operativo (SO) con respecto a la que ofrece el hardware como Retina Display, de esta manera obtenemos mejores resultados en cuanto a la resolucion que ofrece cada dispositivo, pudiendo mostrar imagenes en alta definicion.
+
+   -Para esto utilizaremos el selector "resolution" en el Media Query como veremos en el archivo base.css.
+
+
+
+    ACLARACIONES: 
+
+    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no,minimum-scale=0,maximum-scale=1">
+    <title>Resoluciones y Retina Display</title>
+
+    <link rel="stylesheet" type="text/css" href="base.css">
+
+</head>
+
+<body>
+
+    <div class="sideBar" >
+
+        <ul>   
+            <li><a href="" >Menú 1</a></li>
+            <li><a href="" >Menú 2</a></li>
+            <li><a href="" >Menú 3</a></li>
+            <li><a href="" >Menú 4</a></li>
+            <li><a href="" >Menú 5</a></li>
+        </ul>
+
+    </div>
+
+    <div class="container">
+
+        <p>        
+        Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo.
+        </p>
+        <p class="description">
+        Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+        At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. 
+        </p>
+        <p>
+        Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. 
+        </p>
+        <p>
+        Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. 
+        </p>
+        <p>
+        Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. 
+        </p>
+    </div>
+
+    <div class="socialBar">
+        <div class="twitter"></div>
+        <div class="facebook"></div>
+        <div class="instagram"></div>
+    </div>
+        
+
+    
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 04. Estilos según la orientación del dispositivo en CSS
+    
+*/
+
+/*Estilos para pantallas grandes o de escritorio*/
+
+/*@media: Selector del tipo AT o @, que hace ferencia a que trabajaremos con  dispositivos. Segudo de "all" porque sera apra todos aquellos; donde podemos integrar algunos operadores en este caso "and" para indicar que se aplique la propiedad tambien a aquel dispositivo, en este caso que tenga a un min-width (ancho minimo) de 1001px. */
+
+    /*Aplica estilo (color verde claro y letras en blanco) cuando el dispositivo tiene como ancho minimo 1001px.*/
+
+    @media all and (min-width:1001px)
+    {
+        body
+    {
+        background-color: #B3D68F;
+        color: white;
+    }
+
+    }

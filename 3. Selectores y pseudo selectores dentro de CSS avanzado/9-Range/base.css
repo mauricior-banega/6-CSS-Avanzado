@@ -1,0 +1,59 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 09. Estilos según los diferentes rangos dentro de CSS
+
+*/
+/*
+    -
+
+    ACLARACIONES:
+
+
+*/
+
+body
+{
+    justify-content: center;
+    display: flex;
+    
+}
+
+.container
+{   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+input
+{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+/* Aplicamos estilos en base al un determinado RANGO que podamos tener; mediante la propiedad input dopnde tiene asignado valores minimos/maximos mediante la sentencia (min/max). Podemos como veremos, asignar estilos, definiendo el pseudo selector in-range o out-of-range para cualquiera de los casos
+
+-Para este ejemplo si es <5 y <20 estara en rango, y en rojo si esta por fuera.*/
+
+input:in-range
+{
+    background-color: #77bcba;
+}
+
+input:out-of-range
+{
+    background-color: #ff0000;
+}
+

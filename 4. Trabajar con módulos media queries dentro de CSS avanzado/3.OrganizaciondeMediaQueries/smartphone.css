@@ -1,0 +1,32 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 03. Organización de estilos en archivos media queries con CSS
+*/
+
+/*Estilos para pantallas chicas o teléfonos móviles*/
+
+/*En este ultimo ejemplo indicamos que tenga 3 condiciones, las primeras 2 y ADEMAS tambien para la 3ra, se separa mediante comas.
+    
+    Quita los dics de .socialBar (que ya no estaba) y tambien la de .sideBar sgregando fondo amarillo claro. */
+
+
+    @media all and (max-width:699px) and (min-width:10px), (max-width:1200px)
+    {   
+        .socialBar
+        {
+            display: none;
+        }                                                
+
+        .sideBar
+        {
+            display: none;
+        }
+
+        body
+        {
+            background-color: #E0BD52;
+        }
+
+    }

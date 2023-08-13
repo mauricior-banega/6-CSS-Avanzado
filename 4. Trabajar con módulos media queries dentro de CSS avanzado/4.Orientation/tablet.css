@@ -1,0 +1,50 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 04. Estilos según la orientación del dispositivo en CSS
+*/
+
+/*Estilos para pantallas medianas o tabletas*/
+
+
+@media all and (max-width:1000px) and (min-width:700px)
+    { 
+
+        .socialBar
+        {
+            display: none;
+        }
+
+        body
+        {
+            background-color: #78BDBA;
+            color: white;
+        }
+
+    }
+
+/*El objetivo de esta clase es mostrar como aadaptar segun el caso si giramos el dispositivo emulado en nuestro explorador. Aplicamos estilos de quitar elementos y acomodarlos de manera que puedan verse de forma optima en un dispositivo en este caso tablet.
+
+ACLARAMOS: No funciona exactamente como en el video ya que usamos otros paramentros distintas a las del video para crear cada elemento de nuestros archivos css y es por ello que no se adaptan a los ejemplificados. Pero conceptualmente si se entiende que de esta manera codificando pueden aplicarse cambios en nuestro archivo mediante la sentencia orientation: landscape o portrait.*/
+
+
+
+@media all and (orientation:landscape)
+{
+    body{
+        flex-flow: row;
+    }
+}
+
+@media all and (orientation:portrait)
+{
+    body{
+        flex-flow: column;
+    }
+
+    .sideBar > ul >
+    {
+        display:inline;
+    }
+}

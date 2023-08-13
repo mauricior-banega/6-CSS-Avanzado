@@ -1,0 +1,87 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº 2: Conceptos generales que veremos en el curso de CSS avanzado
+    
+    -Video 04. 04. Flexbox- otorgar comportamientos a los ítems de diseño (parte 2)
+
+*/
+/*
+
+-Explicaremos como podemos AGRUPAR en una misma sentencia las propiedades de flex-direction y flex-wrap.
+-Esto lo realizamos mediante la declaracion "flex-flow". 
+-Dentro de esta regla, el 1º parametro que recibe va a ser la "direccion", pudiendo establecer como vimos antes; (row/row-reverse/column/column-reverse) y 2º el
+paramentro "wrap" o "wrap-reverse".
+
+-De esta manera ya podemos hacer el agrupado quedando definido como vemos en el archivo.
+
+------------------------------------------------------------------
+
+Sentencia: flex-grow 
+
+-Ejemplificada en la clase .item donde la aplicamos y lo que hace es hacer que los elementos de esa clase se hagan mas grandes o mas pequeños, pudiendo tomar valores desde 0 a 1, por ejemplo: 0.1/0.2/0.3 etc.
+
+------------------------------------------------------------------
+
+Sentencia: align-self 
+
+-Indica la alineación de un elemento dentro del bloque que lo contiene. La ejemplificamos para la clase .item2 que aplicamos en el HTML como 2º clase a la tambien pertenece, ya que tiene las propiedades de .item tambien. Pudiendo definir propiedad es de ubicacion particulares de la propiedad (ver los ejemplos que tira automaticamente VSC o el navegador desde el Inspector). En el ej usaremos la "flex-end" para enviar el elemento Item2 debajo del div.s
+
+------------------------------------------------------------------
+
+Sentencia: order
+
+-Como sabemos, los elementos en nuestro caso Item1/2/3 del ejemplo los agrega de la misma manera que fueron declarados, en ese orden de 1 2 y 3. Bien, pero podemos cambiar ese ordenamiento agregando la sentencia order: y especificar en que orden mostrarlos. Podemos tambien crear una clase y asignar esa propiedad a los elementos para disponerlos de la manera que queramos.
+-En el ejemplo pondremos el Item2 1º, el Item3 2º y el Item2 3º.
+
+ACLARACION:
+
+------------------------------------------------------------------
+
+
+*/
+
+.contenedor
+{   
+    display: flex;
+
+    /*
+    flex-direction:row;
+    flex-wrap: wrap;
+    */
+
+    flex-flow: row wrap;   /*Sentencia de agrupamiento flex-direction/wrap*/
+    
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+    background-color: lightgreen;
+    padding-top: 10px;
+    margin: 100px auto;
+    width: 300px;
+    height: 150px;
+    text-align:center;
+    font-weight: bold;
+}
+
+.item
+{   
+    order:3;
+    flex-grow: 1; /*Agranda o achica el elemento*/
+    padding-top: 20px;
+    width:80px;
+    height:40px;
+    background-color: darkorange;
+    margin-left: 2px;
+}
+
+.item2
+{   
+    order:1;
+    align-self: flex-end; /*Indica la alineación de un elemento dentro del bloque que lo contiene*/
+}
+
+.item3
+{   
+    order:2;
+}

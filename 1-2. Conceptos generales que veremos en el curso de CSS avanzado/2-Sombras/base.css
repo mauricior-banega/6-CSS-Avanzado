@@ -1,0 +1,55 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº 2: Conceptos generales que veremos en el curso de CSS avanzado
+    
+    -Video 02. Aplicar sombras en cajas y textos dentro de CSS avanzado
+
+*/
+/*
+ Sentencia:  box-shadow 
+
+-Realiza un sombreado de caja/div.
+-Podemos manejar 6 paramentros o argumentos para su declaracion pudiendo aplicar los que necesitemos.
+-Explicaremos a que corresponde cada paramentro en su posicion:
+
+(Necesitamos el 1º y 2º valor para que podamos ver el sombreado)
+
+box-shadow: 1º valor (sombreado horizontal)
+            2º valor (sombreado vertical)
+            3º valor blur (transparencia)
+            4º valor alcance (que tan grande se vera la sombra)
+            5º color: Pudiendo ser Hexadecimal/palabra reservada/rgba etc.
+            6º incrustado (como se va a ver) inset/outset (valor defecto, y pudiendo no estar en el codigo).
+
+ACLARACION: Si el valor es 0 puede no ser declarado el valor en px.
+
+------------------------------------------------------------------
+
+Sentencia:  text-shadow
+-Realiza un sombreado en el texto.
+-Podemos manejar 4 paramentros o argumentos para su declaracion pudiendo aplicar los que necesitemos.
+-Explicaremos a que corresponde cada paramentro en su posicion:
+
+(Necesitamos el 1º y 2º valor para que podamos ver el sombreado)
+
+text-shadow: 1º valor (sombreado horizontal)
+             2º valor (sombreado vertical)
+             3º valor blur (transparencia)
+             4º color: Pudiendo ser Hexadecimal/palabra reservada/rgba etc.
+
+*/
+
+.contenedor
+{   
+    box-shadow: 10px 10px 5px 0 #e60000 inset;
+    text-shadow: 10px 5px 3px #000;
+
+    border-radius: 15px;
+    background-color: lightgreen;
+    padding-top: 80px;
+    margin: 100px auto;
+    width: 300px;
+    height: 100px;
+    text-align:center;
+    font-weight: bold;
+}

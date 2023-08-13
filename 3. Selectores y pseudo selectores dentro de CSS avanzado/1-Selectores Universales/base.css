@@ -1,0 +1,64 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 01. Universales o selectores de tipo - dentro de CSS avanzado
+
+*/
+/*
+ Sentencia: (*) - Usaremos los Selectores Universales, cuando queremos hacer un Reset es decir quitar todas las opciones que vienen por defecto, cuya sentencia es el * seguido de corchetes. Sin importar que navegador lo abra, esto ocurre que todos ellos tienen un tipo de letra/margen etc por defecto y nosotros lo podemos modificar.
+
+ACLARACION: 
+*/
+@font-face{
+    font-family:"Raleway";
+    src: url("Raleway-SemiBold.ttf");
+    font-weight: 400;
+    font-style:normal;
+}
+
+
+* /*Selector Universal*/
+{
+    margin:0; 
+    padding: 0;
+    font-family:"Raleway";
+}
+
+.contenedor
+{   
+    border-radius: 15px;
+    width: 90%;
+    height: 150px;
+    font-weight: bold;
+    font-size: 12px;
+    
+}
+
+.contact
+{
+    width: 90px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+    background-color: #A3D1B0;
+    margin: 20px;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+.contactoPhoto
+{
+    width: 100%;
+    height: 100px;
+    
+    background: url(icono.png) 50% 50% no-repeat;
+    background-size: 220px 220px;
+    
+}
+
+.contactName
+{
+    font-family:"Arial";
+    
+}

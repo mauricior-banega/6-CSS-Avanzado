@@ -1,0 +1,148 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 10. Pares e impares, identificación de datos en pantalla en CSS
+
+*/
+/*
+    - Cuando trabajamos con tablas principalmente a veces necesitamos seleccionar determinada catidad de lineas o establece el color de fondo si el reglon es par o impar. O dar color de fondo repitiendo un cierto patron a partir de un elemento HTML necesitamos determinar cual sera ese elemento.
+
+    -Para esto nos serive el selector "nth", para aplicar a elementos de una listas/tablas como en el ejemplo o bloques de etiquetas que nosotros vallamos determinando.
+
+    -Aplicaremos el selector nft en una tabla para mostrar distintas situaciones que ejemplificaremos a continuacion. Esta tabla es una lista de paises con su continente y poblacion.
+
+
+
+    ACLARACIONES:
+
+
+*/
+
+body
+{
+    justify-content: center;
+    display: flex;
+    
+}
+
+.container
+{   
+    /*justify-content: center;*/
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+    height: 330px;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+table {
+    
+    border-collapse:collapse;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+th
+{   
+    flex-flow: row wrap;
+    background-color: mediumaquamarine;
+}
+
+td
+{
+    padding: 5px;
+    border: 1px solid #CCC;
+}
+
+tr:hover
+{
+    background-color: #FFCC99;
+}
+
+/*A partir de aca comenzaremos a trabajar con "nft". Donde hasta el momento tenemos una tabla de paises y otros datos, que se cambia de color el fondo cuando pasamos el mouse por sobre cada "tr" de "tbody". */
+
+/*Mediante nth indicaremos que se pinte de color la 2da opcion de "tr" que es Argentina*/
+
+      /*  Comentamos para ejemplificar otro
+      
+            tr:nth-child(2)
+        {
+            background-color: #A3D1B0;
+        } */
+
+/*En este ejemplo mostramos pintado de verde claro todos "tr" PARES, mediante el parametro reservado "even" (que se dice iven)*/
+
+tr:nth-child(even)
+{
+    background-color: #A3D1B0;
+}
+
+/*Ahora similar al anterior, mediante el parametro reservado "odd" indicamos que se pinten todos los IMPARES de color turquesa */
+
+tr:nth-child(odd)
+{
+    background-color: #66FFFF;
+}
+
+
+
+/*Podemos ver que mediante la otra sentencia "3n" (que significa cantidad de veces), indicamos que se aplique estilos "N" veces seguido de la cantidad a los elementos indicados.
+
+En nuestro caso pintara de gris oscuro cada 3 elementos "tr". 
+
+
+    -Comento para ejemplificar otra propiedad añadida de este
+
+            tr:nth-child(3n)
+            {
+                background-color: #364F59;
+                color: white;
+            }
+
+*/
+
+/*Como aqui podemos observar añadimos a "+6" al parametro 3n. Y esto significa que aplicara estilo, COMENZANDO por el 6to elemento como (1ro) y A PARTIR DE ESE, "3n" osea que pintara de gris oscuro a España y al los 3eros elementos apartir de el.
+
+
+-Comento para ejemplificar otra propiedad añadida de este
+            tr:nth-child(3n+6)
+            {
+                background-color: #364F59;
+                color: white;
+            }
+*/
+
+
+/*                  ---
+
+(Comento y hago la propiedad antes sino no toma el efecto correctamente si estuviese al ultimo). 
+    
+Por ultimo  la sentencia "nth-last-child" indica que aplciara estilo apartir del ultimo elemento decrementando en su pocision si se le indica. Es decir que se pintara apartir del ultimo en la posicion 3º (de abajo hacia arriba) de color rojo.
+
+Los paramentros con los que podemos asignar para dar propiedades a elementos pueden ser entonces: numeros/numeros+n (repeticiones o veces)/par o impar (even u odd) o concatenando  "n(+/-) + nº". */
+
+tr:nth-last-child(3n)
+{
+    background-color: red;
+}
+
+/*                  ---
+
+Tambien podriamos aplicar de esta forma, y esto quiere decir que se aplicara -n (osea que no aplique nada y si se apliquen los definidos funcionando odd/even) PERO que si se aplique el gris oscuro a los 1eros 5 elementos, y apartir de este que aplique como dije lo definido para nth-child(odd)/(even). */
+
+
+tr:nth-child(-n+5)
+{
+    background-color: #364F59;
+    color: white;
+}
+

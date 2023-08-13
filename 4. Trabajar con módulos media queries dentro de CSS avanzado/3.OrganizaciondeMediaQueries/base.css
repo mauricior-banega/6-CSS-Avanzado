@@ -1,0 +1,37 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 03. Organización de estilos en archivos media queries con CSS
+*/
+/*
+    ACLARACIONES: Antes, todo el codigo estaba creado aca, y al repartirlo en cada uno de los archivos creados para administrarlo mejor (general/desktop/tablet/smartphones.css) ahora nos quedo base.css vacio. Entonces nos sirve para hacer el llamado a cada archivo de css creado, de este lado y no desde el index mediante "links reel". Es decir haremos todos los llamados a otros archivos para que se conecten y funcionen como uno, y el index solo llamando a base.css los llamaria tambien a su vez a TODOS.
+
+    Esto se realiza mediante un AT o @ llamado @import, del cual mediante url le pasamos la ubicacion de ese archivo css que deseemos incrustar.
+
+    -Ademas hay que tener SIEMPRE en cuenta que:
+
+    1-Los @import van siempre al comienzo del archivo CSS.
+    2-Que se debera respetar siempre el orden en cascada de creado los archivos css y de esa menra ir haciendo los llamados, osea primero general, luego desktop etc.
+
+    Ejemplificamos:
+
+*/
+ 
+@import url(general.css);
+@import url(desktop.css);
+@import url(tablet.css);
+@import url(smartphone.css);
+
+    
+/*Si llegasemos a crear alguna propiedad en esta parte, va a afectar el estilo de todos los import que le pertenecen, por ejemplo si le pongo color de letra bordo al body, este aplicara a todos los otros estilos nombrados*/
+
+body
+{
+    color: rgb(206, 11, 44);
+}
+
+    
+
+    
+

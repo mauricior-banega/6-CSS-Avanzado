@@ -1,0 +1,55 @@
+<!--
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 02. Qué son los hijos dentro de CSS avanzado
+
+    - Los "Selectores Hijos" son aquellos elementos que dependen de otros elementos. Es decir cuando tenemos un elemento A y su hijo B entonces dependen directamente, a su vez si B tiene hijos C, estos ultimos no pueden depender del primer elemento A. Es decir que la "relacion directa" se da cuando se liga directamente uno al otro.
+
+    -(1*) Ponemos por ejemplo el <ul que tiene de hijo a 4 <li.
+
+    ACLARACION: 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Selectores Hijos</title>
+
+    <link rel="stylesheet" type="text/css" href="base.css">
+
+</head>
+
+<body>
+
+    <h1>Tareas del dia</h1>
+    <ul id="to_dos">
+
+            <li>Pendientes
+
+                <ul> <!--1 UL PADRE A-->
+                    <li>Pasear al perro</li> <!--4 LI HIJOS B-->
+                    <li>Comprar comida</li>
+                    <li>Planear vacaciones</li>
+                    <li>Ir al gym</li>
+                </ul>
+
+            </li> 
+            
+            <li>Completados
+
+                <ul>
+                    <li>Agendar juntas</li>
+                    <li>Reservar boletos</li>
+                    <li>Enviar flores</li>
+                </ul>
+
+            </li>
+
+    </ul>
+
+</body>
+</html>

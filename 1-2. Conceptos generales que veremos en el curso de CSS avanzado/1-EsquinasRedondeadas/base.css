@@ -1,0 +1,46 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº2: Conceptos generales que veremos en el curso de CSS avanzado
+    
+    -Video 01. Trabajar con esquinas redondeadas de un contenedor en CSS
+
+*/
+/*
+ Sentencia: border-radius:
+ 
+ -En ella podemos definirla de esa forma abreviada, decimos asi porque si bien podemos definir un valor que afecten a los bordes de las 4 esquinas (angulos): border-radius: 10px;
+
+ Tambien podemos definir la sentencia para afectar a cada una de las esquinas por separado, indicando el borde + posicion + izq o der + radius, asi:
+
+border-top-right-radius: 10px; (ángulo superior derecho)
+border-top-left-radius: 10px; (ángulo superior izquierdo)
+border-bottom-left-radius: 10px; (ángulo inferior izquierdo)
+border-bottom-rigth-radius: 10px; (ángulo inferior derecho)
+
+Podemos además SIMPLIFICAR aun mas si queremos, a estas 4 lineas de código. Indicando asi, para cada valor en posición: 
+
+border-radius + 1º valor (esq sup izq) +  2º valor (esq sup der) + 3º valor (esq inf izq) + 4º valor (esq inf derecha);
+
+Quedando: border-radius: 10px 20px 30px 40px;
+
+Podemos crear formas/figuras, ejemplificamos 2.
+
+Ej 1: Elipse: border-radius: 50%; (ponemos 1 solo valor en %)
+
+Ej 2: border-radius: 15px / 50px; (1º valor afecta esq laterales / 2º valor afecta esq frontales).
+
+ACLARACION: Podemos abrir en Inspeccionar desde nuestro navegador + Editor de estilo e ir cambiando los valores o quitando elementos para ir viendo los cambios sin afectar el codigo original y cambiarlo una vez que este de acuerdo.
+
+*/
+
+.contenedor
+{   
+    border-radius: 10px 20px 30px 40px;
+    background-color: lightgreen;
+    padding-top: 80px;
+    margin: 100px auto;
+    width: 300px;
+    height: 100px;
+    text-align:center;
+    font-weight: bold;
+}

@@ -1,0 +1,33 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 01. Viewports y diseño responsive- combinación adecuada en CSS
+*/
+/*
+    -
+
+    ACLARACIONES:
+
+
+*/
+
+body
+{   
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    
+}
+
+.container
+{ 
+width: 330px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px green;
+}
+

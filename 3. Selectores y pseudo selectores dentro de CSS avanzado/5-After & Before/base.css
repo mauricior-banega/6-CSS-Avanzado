@@ -1,0 +1,84 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 05. Insertar contenido con after y before desde CSS
+
+*/
+/*
+    -
+
+    ACLARACIONES:
+
+
+*/
+
+*
+{   
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+body 
+
+{
+    width: 251px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 40%);
+}
+
+.container
+{
+    width: 250px;
+    border-radius: 15px;
+}
+
+
+.container > p
+{
+    border: 1px solid #1270A1;
+    background-color: #A3D180;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/*Sentencia que indica; agregar contenido ANTES del primer objeto de .container; seria el elemento "p". Por ello ANTES del parrafo muestra: "Contenido antes del div" */
+.container::before
+{
+    content:"Contenido antes del div";
+}
+
+/*Sentencia que indica; agregar contenido DESPUES del primer objeto de .container; seria el elemento "p". Por ello DESPUES del parrafo muestra: "Contenido antes del div" */
+
+.container::after
+{
+    content:"Contenido despues del div";
+}
+
+/*Haremos insertar una imagen antes del link */
+/*Sentencia que indica; agregar contenido (imagen en este caso)ANTES del primer objeto que seria el link. Por ello sentenciamos a::before, ya que a representa al link en cuestion, seguido de :b:before. */
+
+a::before
+{
+    content:"";
+    padding-left: 32px;
+    background: url(link.png) left center no-repeat;
+}
+
+
+/*Otra forma de tambien sacarle provecho a la herramienta es definir aparte del objeto/elemento, detectar en base al micro-dato (en este caso data-nombre). Ejemplificaremos tambien con el elemento "a", donde el objetivo es capturar el valor del micro dato "data-nombre" y mostrarlo, seguido del contenido de content ("el"). Quedando por final Mas informacion en el buscador +link.png+Google.com.
+
+-De esta manera es que podemos añadir propiedades al elemento HTML y tambien cambiar el contenido.
+
+Quedando asi:
+
+a::before
+{
+    content:"el " attr(data-nombre) ""; Para concatenar el valor attr (atribute) solod ejamos espacio.
+    padding-left: 32px;
+    background: url(link.png) left center no-repeat;
+}
+
+*/

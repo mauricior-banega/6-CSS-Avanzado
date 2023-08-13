@@ -1,0 +1,71 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 08. Estilos a primer y último hijo o elemento con CSS
+
+*/
+/*
+    -
+
+    ACLARACIONES:
+
+
+*/
+
+body
+{
+    justify-content: center;
+    display: flex;
+    
+}
+
+.container
+{   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border-color: green;
+    box-shadow: 0px 0px 7px green;
+
+}
+
+/* 
+- Se codifica mediante el elemento + el pseudo selector, que pueden ser 2:  "first-child" o "last-child". Para poner ambas propiedades se las separa con (,) .
+
+- Esto detectara el primer hijo y el ultimo hijo de los li, porque estan ambos declarados.
+
+-Existen variantes de este pseudo selector tambien; la codificamos mas abajo
+
+*/
+
+li:first-child, li:last-child
+{
+    font-weight: bold;
+    font-size: 20px;
+    color: #219652;
+}
+
+
+/* 
+- La otra variante que tiene es el pseudo selector "firts o last -of-type".
+
+- Esto detectara el primer bloque de elementos o el ultimo.
+
+-Aplicamos ambas sentencias juntas para que aplique estilo al 1º/2º bloque (ul).
+*/
+
+ul:first-of-type, ul:last-of-type
+{
+    background-color: #D4D4D4;
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,90 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 03. Organización de estilos en archivos media queries con CSS
+*/
+
+/*Estilos generales para el sitio*/
+
+
+body
+{   
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    
+}
+
+ul
+{
+    float: right;
+    list-style:none; /*Quita los puntitos de la lista li/ul */
+    
+}
+li
+{   
+    padding-left: 80px;
+    background: url(enlace.png) center no-repeat;
+    
+}
+
+.socialBar
+{
+    width: 150px;
+    height: auto;
+}
+
+.sideBar
+{
+    width: 200px;
+    height: auto;
+}
+
+.twitter,.facebook,.instagram
+{   
+    width: 100px;
+    height: 100px;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+
+
+.twitter
+{
+    background: url(tw.png) center center no-repeat;
+    
+}
+
+.facebook
+{
+    background: url(fb.png) center center no-repeat;
+}
+
+.instagram
+{
+    background: url(ig.png) center center no-repeat;
+}
+
+.container
+{ 
+width: 330px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px green;
+}

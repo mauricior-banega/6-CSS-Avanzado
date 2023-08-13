@@ -1,0 +1,23 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+*/
+    @media all and (max-width:699px) and (min-width:10px), (max-width:1200px)
+    {   
+        .socialBar
+        {
+            display: none;
+        }                                                
+
+        .sideBar
+        {
+            display: none;
+        }
+
+        body
+        {
+            background-color: #E0BD52;
+        }
+
+    }

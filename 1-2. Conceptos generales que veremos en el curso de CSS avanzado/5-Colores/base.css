@@ -1,0 +1,49 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº 2: Conceptos generales que veremos en el curso de CSS avanzado
+    
+    -Video 05. Asignar colores avanzados dentro de CSS avanzado
+
+*/
+/*
+
+-Podemos utilizar varias sentencias/objetos para definir colores en nuestro archivo CSS, como letras o fondos etc. Te nombraremos algunas:
+
+Mediante palabra reservada Ej: red/black/white etc.
+color: rgb(255,255,0) -Valor en RGB
+color: rgba(255,255,0, 0.3) -Valor en RGB + canal Alfa (transparencia).
+background: hsl();
+
+-Sentencia "hsl" ( hue, saturation%, lightness% ); es basicamente colores obtenidos de una rueda de colores, con 3 elementos principales:
+
+-H (HUE): Matiz/Tono o Tinte; de la rueda de color, donde el 0 es rojo, el 120 es verde y el 240 azul pudiendo conjugarlos para llegar a color deseado.
+-S (SATURATION), adopta valores del 0% a 100%.
+-L (LIGHTNES) Brillo; adopta valores desde 0% a 100%.
+
+-Tambien puede adoptar el canal alpha agregando la a, quedando por ej asi: hsla(120, 50%, 50%, 0.4)
+
+ACLARACION: Para obtener el valor en RGB de algun color podemos acudir a paginas que nos muestren esto ej: colorpicker.com o bien Illustrator/Canva/AdobePhotoshop/Inkscape etc.
+
+
+
+-----------------------------------------------------------------
+
+*/
+
+.contenedor
+{   
+    color: rgba(246,0,46,0.3); /*Valor RGBA de la fuente*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: hsla(120, 50%, 50%, 0.4);
+    padding-top: 10px;
+    margin: 100px auto;
+    width: 300px;
+    height: 150px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align:center;
+}
+

@@ -1,0 +1,55 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 02. Qué son los hijos dentro de CSS avanzado
+
+*/
+/*
+
+*/
+
+@font-face{
+    font-family:"Raleway";
+    src: url("Raleway-SemiBold.ttf");
+    font-weight: 400;
+    font-style:normal;
+}
+
+
+* /*Selector Universal*/
+{
+    font-family:"Raleway";
+}
+
+/* to_dos es Padre de 2 li y afectara a padre e hijos con esta sentencia. Es decir, la declaracion afectara a todos los li hijos de to_dos. */
+
+#to_dos > li 
+{   
+    border: 1px solid #219652;
+    margin: 10px;
+    width: 300px;
+    padding: 5px;
+    list-style: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Afecta a todos los li hijos de to_dos, igual que arriba pero con el efecto de pasar el mouse sobre la caja */
+/*
+#to_dos > li:hover
+{
+    background-color: #D4D4D4;
+    padding: 3px;
+    border-radius: 3px;
+}
+*/
+
+/* Afecta a todos los li hijos de to_dos pero a su vez a los hijos de esos li hijos. Esto se da por la sentencia doble de  "#to_dos > li li". Con el efecto igual que arriba pero con el efecto de pasar el mouse sobre cada elemento li en este caso.*/
+
+#to_dos > li li:hover
+{
+    background-color: #D4D4D4;
+    padding: 3px;
+    border-radius: 3px;
+}

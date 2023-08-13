@@ -1,0 +1,40 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 05. Estilos según el tamaño del dispositivo en CSS avanzado
+*/
+
+/*Estilos para pantallas con tamaño especifico. */
+
+
+/*Lo que haremos el mediante este Media Query es darle estilo al body/.sideBar/.sideBar > ul > li/.socialBar con valores entre un dispositivo personalizado de min de alto 400px y max 600px */
+
+@media all and (min-device-height: 400px) and (max-device-height: 600px)
+{
+    body
+    {
+        flex-flow: column;
+        background-color: #777900;
+        color: #FFF;
+    }
+
+    .sideBar
+    {
+        display: inline;
+    }
+
+    .sideBar > ul > li
+    {
+        display: inline;
+    }
+
+    .socialBar
+    {
+        display: inline;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 0px;
+    }
+}   

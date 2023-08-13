@@ -1,0 +1,19 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 05. Estilos según el tamaño del dispositivo en CSS avanzado
+
+*/
+
+
+
+    @media all and (min-width:1001px)
+    {
+        body
+    {
+        background-color: #B3D68F;
+        color: white;
+    }
+
+    }

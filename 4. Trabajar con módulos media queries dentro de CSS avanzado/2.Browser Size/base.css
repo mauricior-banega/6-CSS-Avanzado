@@ -1,0 +1,155 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 02. Estilos según el tamaño del navegador en CSS avanzado
+*/
+/*
+    -
+
+    ACLARACIONES:
+
+
+*/
+
+body
+{   
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    
+}
+
+ul
+{
+    float: right;
+    list-style:none; /*Quita los puntitos de la lista li/ul */
+    
+}
+li
+{   
+    padding-left: 80px;
+    background: url(enlace.png) center no-repeat;
+    
+}
+
+.socialBar
+{
+    width: 150px;
+    height: auto;
+}
+
+.sideBar
+{
+    width: 200px;
+    height: auto;
+}
+
+.twitter,.facebook,.instagram
+{   
+    width: 100px;
+    height: 100px;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+
+
+.twitter
+{
+    background: url(tw.png) center center no-repeat;
+    
+}
+
+.facebook
+{
+    background: url(fb.png) center center no-repeat;
+}
+
+.instagram
+{
+    background: url(ig.png) center center no-repeat;
+}
+
+.container
+{ 
+width: 330px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px green;
+}
+
+
+    /*@media: Selector del tipo AT o @, que hace ferencia a que trabajaremos con  dispositivos. Segudo de "all" porque sera apra todos aquellos; donde podemos integrar algunos operadores en este caso "and" para indicar que se aplique la propiedad tambien a aquel dispositivo, en este caso que tenga a un min-width (ancho minimo) de 1001px. */
+
+    /*Aplica estilo (color verde claro y letras en blanco) cuando el dispositivo tiene como ancho minimo 1001px.*/
+
+    @media all and (min-width:1001px)
+    {
+        body
+    {
+        background-color: #B3D68F;
+        color: white;
+    }
+
+    }
+
+
+
+    @media all and (max-width:1000px) and (min-width:700px)
+    {   
+        /*En el ejemplo indicamos que tenga 2 condiciones, ancho minimo y maximo y que aplique el estilo de: desactivar el div de clase .socialBar con (display: none;) y darle color de fondo verde claro y letras clancas.
+        
+        Quita el estilo, es decir quita las cajas del costado de redes sociales cuando el ancho es relativamente pequeño, ancho maximo de 1000px y minimo de 700px.s */
+
+        .socialBar
+        {
+            display: none;
+        }
+
+        body
+        {
+            background-color: #78BDBA;
+            color: white;
+        }
+
+    }
+
+    /*En este ultimo ejemplo indicamos que tenga 3 condiciones, las primeras 2 y ADEMAS tambien para la 3ra, se separa mediante comas.
+    
+    Quita los dics de .socialBar (que ya no estaba) y tambien la de .sideBar sgregando fondo amarillo claro. */
+
+
+    @media all and (max-width:699px) and (min-width:10px), (max-width:1200px)
+    {   
+        .socialBar
+        {
+            display: none;
+        }                                                
+
+        .sideBar
+        {
+            display: none;
+        }
+
+        body
+        {
+            background-color: #E0BD52;
+        }
+
+    }
+

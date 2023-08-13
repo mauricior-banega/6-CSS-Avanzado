@@ -1,0 +1,110 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº 2: Conceptos generales que veremos en el curso de CSS avanzado
+    
+    -Video 03. Flexbox - una sencilla manera de maquetar con CSS avanzado
+
+*/
+/*
+
+-Explicaremos varias formas de organizar los elementos de nuestro documento de manera practica y simplificada.
+
+-Identificaremos que en el archivo tenemos un contenedor y elementos del contenedor (Items nº). Del cual como los items estan dentro del div contenedor (son hijos) FlexBox afectara tanto al bloque de codigo declarado en (.contenedor) como a (.item).
+
+-Indicaremos varias sentencias FlexBox:
+                    
+    display: flex;
+
+    flex-direction: row;
+
+-Organiza los elementos en un renglón, todos en fila horizontal, Este es el valor por defecto de la propiedad display: flex; (sin necesidad de ser declarado el flex-direction:row).
+-Pero tiene su variante, reverse: 
+
+    display: flex;
+
+    flex-direction: row-reverse;
+
+-Organiza los elementos en un renglón, todos en fila horizontal pero invertidos, quedando el Item 3 1º, el Item 2 2º y el Item 1 3º.
+------------------------------------------------------------------
+
+    display: flex;
+
+    flex-direction: column;
+    
+-Organiza los elementos en columna. Tiene la variante flex-direction: column-reverse (invertido).
+
+------------------------------------------------------------------
+
+flex-wrap: wrap;
+
+-Agrupa los elementos. Si trabajamos junto al de columnas todos los Items de van para la derecha, pero si trabajamos con row queda bien el efecto organizado, para por ej mostrar muchas imagenes en una galeria de nuestra web, hay que aplicarlo en conjunto con: display: flex;/ flex-direction: row;
+
+------------------------------------------------------------------
+
+justify-content: center;
+
+-Organiza los elementos todos en el centro del componente.
+-Tiene variantes:
+
+    justify-content: flex-end; (organiza al final del componente)
+    justify-content: flex-end; (organiza al comienzo del componente)
+     justify-content: space-between; (acomoda los espacios que hay entre los componentes y los va a distribuir de manera automatica). De esta manera nos ahorramos de crear divs al medio para hacer espacio u otro truco para que los elementos se acomoden.
+
+     justify-content: space-around; (ahora toma los espacios al medio y los espacios al medio de los componentes y los distribuye atravez de la linea.
+
+     justify-content: center; (Centra horizontalmente los componenetes)
+
+     Pero si usamos ademas:
+
+align-items: center; 
+
+-Centra horizontalmente los componenetes/elementos y verticalmente tambien, de manera individual).
+
+align-content: 
+
+-Centra horizontal y verticalmente pero a todos los elementos (no individualemente). -Ademas tiene sus variantes:
+
+align-content: flex-end/flex-start/space-around/space-around/center,etc.
+
+
+ACLARACION:
+
+------------------------------------------------------------------
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+*/
+
+.contenedor
+{   
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+ /* justify-content: center;
+    align-items: center; */
+
+    align-content: flex-end;
+
+
+    border-radius: 15px;
+    background-color: lightgreen;
+    padding-top: 10px;
+    margin: 100px auto;
+    width: 300px;
+    height: 150px;
+    text-align:center;
+    font-weight: bold;
+}
+
+.item
+{
+    padding-top: 20px;
+    width:80px;
+    height:40px;
+    background-color: darkorange;
+    /* margin: 0px 0px; */
+}

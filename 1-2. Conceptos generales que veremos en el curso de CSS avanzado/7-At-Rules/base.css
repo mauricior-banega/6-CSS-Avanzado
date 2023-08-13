@@ -1,0 +1,83 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº 2: Conceptos generales que veremos en el curso de CSS avanzado
+    
+    -Video 07. At-rule, el selector @ dentro de CSS avanzado.
+
+*/
+/*
+
+- En esta clase veremos la declaracion @import.
+- La usamos para organizar nuestros todos los archivos que nuestro proyecto pueda tener, especificando documentos "generales/basicos y especificos para determinados dispositivos o navegadores."
+
+- Declaramos la sentencia import + url + la carpeta que aloja el documento de nombre y ;
+- De esta manera en secuencia de cascada y SIEMPRE AL PRINCIPIO DEL DOCUMENTO es que cargaremos todos nuestros @import para que todo el estilo pueda aplicarse de forma correcta y organizada. Y no ver asi un CSS con 300/600 o mas de miles de lineas de codigo.
+
+-----------------------------------------------------------------
+
+-Tambien podemos especificar mediante @font-face a lo que serian las fuentes.
+- Estas se descargan y pueden estar contenidas dentro de nuestro proyecto. Una vez descargada se llaman mediante la sentencia font-family y se definen como ejemplificaremos debajo.
+
+-----------------------------------------------------------------
+
+-Por ultimo en el ejemplo indica la sentencia @media + print; del cual con ella podemos definir el formato visual que tendra nuestra web al imprimirse. Indicando en este ejemplo que tendra dos columnas y no tenra colores como vemos de la web, entre otras propiedades distintas definidas para el "body" y el "contenedor".
+
+-----------------------------------------------------------------
+
+ACLARACIONES: 
+
+(1*) -Píxeles (px) son unidades de tamaño fijo que se utilizan en los medios de comunicación en pantalla (es decir, para ser leídos en la pantalla del ordenador). Píxel significa "elemento de imagen" y, como sabes, un píxel es un pequeño "cuadrado" en tu pantalla. Los Puntos (pt)  se utilizan tradicionalmente en los medios de impresión (cualquier cosa que se vaya a imprimir en papel, etc.). Un punto equivale a 1/72 de pulgada. Los Puntos son muy parecidos a los píxeles, ya que son unidades de tamaño fijo y no pueden cambiar de tamaño.
+
+*/
+
+@import url(general.css); /*Importacion del CSS general*/
+
+.contenedor
+
+{   
+    
+    background-color: lightgreen;
+    align-items: center;
+    border-radius: 15px;
+    border:8px solid #ccc;
+    padding: 40px;
+    margin: 100px auto;
+    width: 300px;
+    height: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+
+
+/*Importacion de la fuente descargada Ralewey */
+
+@font-face
+{
+    font-family:"Raleway";
+    src: url("Raleway-SemiBold.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-family: "Raleway";
+    text-transform: uppercase;
+}
+
+/* screen, projection, handheld o all */
+
+@media print /* Definicion para formato de impresion web */
+{
+    body
+    {
+        font-size: 10pt; /* (1*)Aclaracion de la diferencia entre px y pt. */
+        font-family: times, serif;
+    }
+
+    .contenedor
+    {
+        column-count: 2;
+        border: none;
+    }
+}

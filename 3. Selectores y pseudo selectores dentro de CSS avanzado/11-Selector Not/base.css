@@ -1,0 +1,120 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 11. Operaciones lógicas de negación dentro de CSS avanzado
+*/
+/*
+    -
+
+    ACLARACIONES:
+
+
+*/
+
+body
+{   
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    
+}
+
+.container
+{ 
+width: 330px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px green;
+}
+
+.buttonContainer
+{   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 330px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px green;
+
+}
+
+.linkContainer
+{   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 330px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px green;
+
+}
+
+a, button
+{
+    margin: 10px;
+}
+
+/*                         ---
+
+Aplicamos la operacion logica de negacion y pseudo selector "not" +(el elemento, que sera una .clase) que va a EXCLUIR de aplicar el estilo definido. Como podemos ver a continuacion exluye de los 5 parrafos al 2do que es el que tiene la clase descripcion:
+
+Ojo: Sino no va a el () pegado al not da error*/
+
+.container :not(.description)
+{
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+/* Ahora indicaremos como aplicar estilo de color de texto (mediante color: #CC9900;) que seria marron claro, a todos los parrafos de la CLASE .container,EXCEPTO el 3º en pocision desde abajo hacia arriba, osea comenzando desde el ultimo. Podremos ver que el parrafo excluido mantiene el color de texto negro, como estaba predefinido.
+
+Es decir aca detectamos mediante la CLASE. */
+
+.container :not(:nth-child(3))
+{
+   color: #CC9900;
+}
+
+/*                      ---
+
+Ahora aplicaremos estilos mediante "not" a un ELEMENTO de una CLASE, que sera sobre 4 Botones.
+
+Indicaremos que aplique estilos (color verde musgo claro) a todos los elementos de tipo Botonde la clase pero que NO aplique al que esta en estado disabled (desabilitado). 
+
+Es decir aca detectamos mediante la CLASE + ELEMENTO + (ESTADO).
+*/
+
+.buttonContainer button:not([disabled])
+{
+    background-color: #78BDBA;
+}
+
+/*                      ---
+
+Por ultimo aplicaremos con el selector "not" estilos detectando el ATRIBUTO del ELEMENTO de una CLASE, que sera en este caso un atributo de link.
+
+Indicaremos que quite los estilos de los links (color azul por defecto de enlace) y que a su vez asigne color gris a los HREF que CONTENGA(*) dentro de el una cadena de valor ".com".
+
+*/
+
+.linkContainer a:not([href*=".com"])
+{
+    text-decoration: none;
+    color: #ccc;
+}

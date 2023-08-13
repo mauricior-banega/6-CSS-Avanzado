@@ -1,0 +1,64 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 06. Aplicar estilos según el estado de los componentes en CSS
+
+*/
+/*
+    -
+
+    ACLARACIONES:
+
+
+*/
+
+body
+{
+    justify-content: center;
+    display: flex;
+    
+}
+
+.container
+{   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid #1270A1;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+/* Cambiaremos efectos en base al ESTADO del elemento; en este caso del CheckBox, prendido o apagado e incluso si se encuentra habilitado o desabilitado.
+-Esto lo realizamos creando un selector de atributo + el elemento que este PEGADO (mas proximo) a ese primer elemento. 
+
+Para nuestro practico el elemento que seleccionamos es "input" donde definimos a su vez el atributo "type:checkbox" e indicamos que; si esta seleccionada la opcion CHBX se ponga en rojo.
+
+A su vez en base al elemento input : enabled (predido) podemos hacer que detecte el elemento mas proximo label para que cambie a color azul. Donde por defecto tendra ese color (si es que desde HTML no esta "disabled" el input).
+
+Comentamos la primera instruccion porque se pisa en el ejemplo explicado.
+
+input[type="checkbox"] + label
+{
+    color: #4F7584;
+}
+
+*/
+
+input[type="checkbox"]:checked + label
+{
+    color: #e60000;
+    text-shadow: 1px 2px 3px #219652;
+}
+
+input:enabled + label
+{
+    color: blue;
+}

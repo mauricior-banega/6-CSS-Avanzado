@@ -1,0 +1,19 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº4: 4. Trabajar con módulos media queries dentro de CSS avanzado
+    
+    -Video 05. Estilos según el tamaño del dispositivo en CSS avanzado
+*/
+/*
+    ACLARACIONES:
+
+*/
+ 
+@import url(general.css);
+@import url(desktop.css);
+@import url(tablet.css);
+@import url(smartphone.css);
+
+/*Import del dispositivo creado personalizado*/
+@import url(myDevice.css);
+

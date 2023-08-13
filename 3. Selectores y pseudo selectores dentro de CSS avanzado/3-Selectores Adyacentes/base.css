@@ -1,0 +1,59 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº3: 3. Selectores y pseudo selectores dentro de CSS avanzado
+    
+    -Video 03. Componentes adyacentes dentro de CSS avanzado
+
+*/
+/*
+    -
+
+    ACLARACIONES:
+
+    (1*) - El simbolo ~ se realiza con Alt Gr (Alt derecho+4 sino funciona apretar el 4 dos veces).
+*/
+
+@font-face{
+    font-family:"Raleway";
+    src: url("Raleway-SemiBold.ttf");
+    font-weight: 400;
+    font-style:normal;
+}
+
+.container
+{   
+    width: 300px;
+    padding: 21px;
+    list-style: none;
+    border-radius: 10px;
+    border-color: aquamarine;
+    border-style: groove;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+span
+{
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Selector Adyacente nº 1: Indica que afecta al elemento "p" al que esta precedido, osea le siga inmediantamente. Por ello aplicara al 1er p pero no a los otros. */
+
+h1 + p
+{
+ background-color: #F5FFB3;
+ padding: 10px;
+ border-radius: 5px;
+ border: 1px solid #ccc;
+}
+
+/*Selector Adyacente nº 2: Indica que afecta a todos los "p" que siguen apartir de h1, pero no lo hara sino esta en el mismo nivel. Ej: Si metemos un DIV que contenga al parrafo 2 esta propiedad no se activara para el ultimo parrafo, porque esta dentro de otra ETIQUETA. Asi mismo, si lo ponemos otro parrafo fuera de la etiqueta donde esta contenido el h1, que es el "div container" tampoco aplicara el afecto de ser adyacente, como vemos en el ejemplo. */
+
+h1 ~ p /*(1*)*/
+{
+ background-color: #F5FFB3;
+ padding: 10px;
+ border-radius: 5px;
+ border: 1px solid #ccc;
+}

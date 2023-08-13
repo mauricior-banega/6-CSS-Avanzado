@@ -1,0 +1,56 @@
+/*
+
+    CSS Avanzado (Curso VideotuBrain) - Carpeta nº 2: Conceptos generales que veremos en el curso de CSS avanzado
+    
+    -Video 06. Entender el funcionamiento de los fondos de pantalla en CSS
+
+*/
+/*
+
+- Mediante la declaracion background: podemos traer imagenes guardadas en nuestra carpeta de archivo o desde la web como sabemos.
+
+-En este caso insertaremos 4 imagenes para componer un fondo. Explica que para poder editar sin modificar el documento lo hacemos desde la web, en Inspeccionar + tocamos en el cursor y luego en el div que lo contiene. Se abrira la parte de CSS y ahi con la ruedita subimos o bajamos los valores.
+
+-Podemos añadir n cantidad e imagenes, las colocamos mediante comas en la misma declaracion background separas por (,) ademas cada capa indicara la posicion de estar una detras de la otra a medida que las vallamos declarando.
+
+-Tambien podemos definir propiedades para cada background añadido mediante tambien (,).
+
+-Vemos una propiedad que explicamos de paso, sirve para hacer gradiente de imagenes osea degradado, mediante la sentencia(linear-gradient), luego "to" + right (o el sentido que desiemos) y sepparado por , el color en cualquiera de sus sentencias; en este ej mediante hexagesimal.
+
+
+ACLARACION: Como no tenemos las imagenes mismas que tiene en curso usare otras imagenes para ejemplificar fondos, que llamare con el mismo nombre.
+
+linear-gradient(to right, #A7F200, #00F2C4), 
+-----------------------------------------------------------------
+
+*/
+
+.contenedor
+
+{   /*Aclaracion: Los dos % indican la posicion en x e y de la imagen.*/
+    
+    background: url(tower.png) 102% 105% no-repeat, url(bulb.png) 0% 100% no-repeat, url(cloud.png)  0% 34% no-repeat, linear-gradient(to right, #A7F200, #00F2C4);
+    
+    background-size: 120px 120px, 100px 100px, 300px 276px, 1000px, 1000px;
+
+      /* Ejemplificamos otros casos:
+
+        background-size: 30% 30%; En size indica el tamaño.
+        background-size: auto 30px; ("auto indica automatico en x y en "y" 30px).
+        background-size: auto; Automatico solo.
+        background-size: cover; Ocupa o extiende todo el lugar del div contenido.*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border:8px solid #ccc;
+    padding-top: 40px;
+    margin: 100px auto;
+    width: 300px;
+    height: 150px;
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+
